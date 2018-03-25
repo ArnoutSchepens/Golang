@@ -1,10 +1,12 @@
 package main
 
 func main() {
-	cards := newDeck()
+	// Writing to file
+	// cards := newDeck()
+	// cards.saveToFile("my_cards.txt")
 
-	hand, remainingDeck := deal(cards, 5)
-
-	hand.print()
-	remainingDeck.print()
+	// Reading file
+	cards := newDeckFromFile("my_cards")
+	cards.shuffle()
+	cards.print()
 }
